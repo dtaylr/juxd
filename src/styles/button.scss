@@ -1,0 +1,79 @@
+$colors:(
+    success: forestgreen,
+    alert: red,
+    normal: #540032,
+    text: white,
+    more: #2E112D,
+    more2: #820333,
+    light: #F0433A
+);
+
+.btn{
+    font-size: 1em;
+    border-radius: 10px;
+    width: 7rem;
+    height: 2.5em;
+    text-align: center;
+    font-weight: 550;
+    outline: none;
+    transition-duration: 200ms;
+    cursor: pointer;
+}
+
+.btn a{
+    text-decoration: none;
+    color: goldenrod;
+}
+
+.btn-feat{
+    background-color: map-get($colors, normal);
+    color: map-get($colors, text);
+}
+
+.btn-feat:hover{
+    background-color: map-get($colors , light );
+    color: map-get($colors, text);
+}
+
+.btn-view{
+    background-color: transparent;
+    border: 1px solid map-get($colors, deepBlue);
+}
+
+.btn-view:hover{
+    background-color: map-get($colors, more2);
+}
+
+.moreContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.featBtn-container{
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn-more{
+    background-color: map-get($colors, normal );
+    font-size: large;
+}
+
+
+.btn-alert{
+    background-color: transparent;
+    color: red;
+    width: 5rem;
+    height: 1.3rem;
+    border: 1px solid black;
+}
+
+.btn-alert:hover{
+    background-color: red;
+    color: black;
+    border: none;
+}
+
+
