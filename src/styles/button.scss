@@ -1,7 +1,6 @@
 $colors:(
     success: forestgreen,
     alert: red,
-<<<<<<< HEAD
     main: #F2F2F2,
     drkBlue: #011140,
     liteBlu: #DFE7F2,
@@ -11,15 +10,6 @@ $colors:(
 );
 
 
-=======
-    normal: #540032,
-    text: white,
-    more: #2E112D,
-    more2: #820333,
-    light: #F0433A
-);
-
->>>>>>> 2da33980a7a1b3dd2f7bcaa01d78f362ec650d20
 .btn{
     font-size: 1em;
     border-radius: 10px;
@@ -38,38 +28,22 @@ $colors:(
 }
 
 .btn-feat{
-<<<<<<< HEAD
     background-color: map-get($colors, SkeyeBlu);
-=======
-    background-color: map-get($colors, normal);
->>>>>>> 2da33980a7a1b3dd2f7bcaa01d78f362ec650d20
     color: map-get($colors, text);
 }
 
 .btn-feat:hover{
-<<<<<<< HEAD
     background-color: map-get($colors , greyBlye );
-=======
-    background-color: map-get($colors , light );
->>>>>>> 2da33980a7a1b3dd2f7bcaa01d78f362ec650d20
     color: map-get($colors, text);
 }
 
 .btn-view{
     background-color: transparent;
-<<<<<<< HEAD
     border: 1px solid #B0C6D9;
 }
 
 .btn-view:hover{
     background-color: map-get($colors, liteBlu);
-=======
-    border: 1px solid map-get($colors, deepBlue);
-}
-
-.btn-view:hover{
-    background-color: map-get($colors, more2);
->>>>>>> 2da33980a7a1b3dd2f7bcaa01d78f362ec650d20
 }
 
 .moreContainer{
