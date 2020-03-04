@@ -9,6 +9,7 @@
   }
 
 $colors:(
+<<<<<<< HEAD
     main: #F2F2F2,
     drkBlue: #011140,
     liteBlu: #DFE7F2,
@@ -16,6 +17,13 @@ $colors:(
     greyBlye: #7693A6
 );
 
+=======
+    red: #444444,
+    skiBlue: #7A9FBF,
+    attn: #820333,
+
+);
+>>>>>>> 2da33980a7a1b3dd2f7bcaa01d78f362ec650d20
 
 body, html{
     height: 100%;
@@ -32,9 +40,15 @@ body, html{
 
     .banner{
         text-align: center;
+<<<<<<< HEAD
         background: rgba(255,255,255, 0.4);
         display: inline-block;
         padding: 3rem;
+=======
+        background: rgba(255,255,255, 0.8);
+        display: inline-block;
+        padding: 2rem;
+>>>>>>> 2da33980a7a1b3dd2f7bcaa01d78f362ec650d20
     }
 
     .banner-title{
@@ -49,18 +63,31 @@ body, html{
         padding: 1rem 3rem;
         text-transform: uppercase;
         letter-spacing: 1px;
+<<<<<<< HEAD
         font-family: 'Contrail One', 'Acme', cursive;
         font-size: 1rem;
         background-color: map-get($colors,liteBlu);
+=======
+        font-size: 1rem;
+        background-color: red;
+        border: 1px solid lightcoral;
+>>>>>>> 2da33980a7a1b3dd2f7bcaa01d78f362ec650d20
         transition: all 0.3s linear;
         cursor: pointer;
     }
 
     .btn-banner:hover{
         background: transparent;
+<<<<<<< HEAD
         color: map-get($colors, drkBlue );
     }
 
+=======
+        color: var(--primaryColor);
+    }
+
+
+>>>>>>> 2da33980a7a1b3dd2f7bcaa01d78f362ec650d20
     .featHeading{
         text-align: center;
         color: whitesmoke;
@@ -71,7 +98,11 @@ body, html{
         font-size: 3.7em;
         letter-spacing: 2px;
         margin-bottom: 1.5em;
+<<<<<<< HEAD
         background-color: map-get($colors, drkBlue );
+=======
+        background-color: map-get($colors, attn );
+>>>>>>> 2da33980a7a1b3dd2f7bcaa01d78f362ec650d20
     }
 
     .featContainer{

@@ -1,5 +1,6 @@
 
 $colors:(
+<<<<<<< HEAD
     main: #F2F2F2,
     drkBlue: #011140,
     liteBlu: #DFE7F2,
@@ -9,6 +10,13 @@ $colors:(
 
 
 
+=======
+    main: #540032,
+    links: #F0433A
+);
+
+
+>>>>>>> 2da33980a7a1b3dd2f7bcaa01d78f362ec650d20
 .navbar{
   background-color: map-get($colors, main );
   z-index: 1;
@@ -29,7 +37,11 @@ $colors:(
   align-items: center;
   justify-content: space-between;
   padding: 0 1.5rem;
+<<<<<<< HEAD
   color: map-get($colors, drkBlue );
+=======
+  color: white;
+>>>>>>> 2da33980a7a1b3dd2f7bcaa01d78f362ec650d20
 }
 
 .nav-icon{
