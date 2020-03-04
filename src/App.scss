@@ -1,0 +1,47 @@
+
+@import './styles/button.scss';
+@import './styles/navbar.scss';
+@import './styles/product.scss';
+@import './styles/products.scss';
+@import './styles/productDetail.scss';
+@import './styles/home.scss';
+@import './styles/cart.scss';
+
+html, body{
+  height: 100%;
+}
+
+a{
+  text-decoration: none;
+  // color: red !important;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Contrail One', 'Acme', cursive;
+}
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+ul{
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+// .footer{
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 6em;
+//   margin-top: 4em;
+//   background-color: #540032;
+//   color: white; 
+// }
+
+

@@ -1,0 +1,65 @@
+#prodImg-container{
+    max-width: 300px;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+
+    p{
+        display: inline-block;
+    }
+
+    .btn-bag{
+        position: absolute;
+        top: 70%;
+        right: 0;
+        background: blue;
+        border: none;
+        text-transform: uppercase;
+        padding: 0.5rem 0.75rem;
+        letter-spacing: 1px;
+        font-weight: bold;
+        transition: all 0.3s linear;
+        transform: translateX(101%);
+        cursor: pointer;
+    }
+
+    .btn-bag:hover{
+        color: white
+    }
+
+    svg{
+        margin-right: 0.5rem;
+    }
+
+      .prodImg:hover{
+          opacity: 0.5;
+      }
+}
+
+.prodImg{
+  width: 100%;
+  display: block;
+  height: 100%;
+  transition: all 0.3s linear;
+}
+
+.price-ship-desc{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+
+.shipSpan{
+    margin-right: 1rem;
+    color: midnightblue;
+}
+
+.prod-title{
+    margin-bottom: 1em;
+    word-wrap: none;
+}
+
+#prodImg-container:hover .btn-bag{
+    transform: translateX(0);
+}

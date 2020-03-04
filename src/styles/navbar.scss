@@ -1,0 +1,58 @@
+
+$colors:(
+    main: #F2F2F2,
+    drkBlue: #011140,
+    liteBlu: #DFE7F2,
+    SkeyeBlu: #B0C6D9,
+    greyBlye: #7693A6
+);
+
+
+
+.navbar{
+  background-color: map-get($colors, main );
+  z-index: 1;
+  top: 0;
+  position: sticky;
+  height: 4rem;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar-center{
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  color: map-get($colors, drkBlue );
+}
+
+.nav-icon{
+  font-size: 1.5rem;
+}
+
+.cart-btn{
+  position: relative;
+  cursor: pointer;
+}
+
+.cart-items{
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: pink;
+  padding: 0 5px;
+  border-radius: 30%;
+  color: red
+}
+
+// .nav-links a:hover{
+//   color: map-get($colors, links);
+//   transition-duration: 3ms;
+// }
+
