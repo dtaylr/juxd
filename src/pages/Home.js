@@ -21,9 +21,12 @@ const Home = () => {
 
     return (
         <div className='main' id='main'>
-          <section className='homeHero'>
-            <img className='homeBg' src={store2} alt='hero background'/>
-          </section>
+          <header className='hero'>
+            <div className='banner'>
+                <h1 className='banner-title'>New Collections</h1>
+                <a href='/products'> <button className='btn-banner'>See More</button> </a>
+            </div>
+          </header>
           <h1 className='featHeading'>Featured</h1>
           <div className='featContainer'>
           <section className='featList'>
@@ -39,14 +42,7 @@ const Home = () => {
                    </div> )
                 )}
           </section>
-
           </div>
-          <div className='moreContainer'>
-            <button className='btn btn-more'><Link to= '/products'>View All</Link></button>
-          </div>
-        <section className='heroGrid'>
-            {/* <img className='homeBg' src={store2} alt='hero background'/> */}
-        </section>
     </div>   
     )
 }

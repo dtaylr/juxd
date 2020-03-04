@@ -27,7 +27,7 @@ const Products = () => {
             <div className='filterContainer'>   
                 <Filter sort={sort} size={size} filteredProds={filteredProds}/>
             </div>
-            <h1 className='prodsHead'>Viewing Products</h1>
+            <h2 className='products-title'>All Products</h2>
         <section className="prodContainer">
         {filteredProds.map(product=> (
             <div key={product.id}>

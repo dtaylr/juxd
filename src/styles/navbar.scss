@@ -7,24 +7,48 @@ $colors:(
 
 .navbar{
   background-color: map-get($colors, main );
-  height: 5rem;
-  width: auto;
+  z-index: 1;
+  top: 0;
+  position: sticky;
+  height: 4rem;
+  align-items: center;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
-
 }
 
-.nav-links a{
-  text-decoration: none;
+.navbar-center{
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
   color: white;
-  font-size: 1.4rem;
-  font-weight: 600;
-  flex-direction: row;
-  padding: .5rem;
 }
 
-.nav-links a:hover{
-  color: map-get($colors, links);
-  transition-duration: 3ms;
+.nav-icon{
+  font-size: 1.5rem;
 }
+
+.cart-btn{
+  position: relative;
+  cursor: pointer;
+}
+
+.cart-items{
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: pink;
+  padding: 0 5px;
+  border-radius: 30%;
+  color: red
+}
+
+// .nav-links a:hover{
+//   color: map-get($colors, links);
+//   transition-duration: 3ms;
+// }
 

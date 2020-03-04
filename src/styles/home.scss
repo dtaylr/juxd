@@ -1,4 +1,12 @@
 
+:root {
+    --primaryColor: #f09d51;
+    --mainWhite: #fff;
+    --mainBlack: #222;
+    --mainGrey: #ececec;
+    --mainSpacing: 0.1rem;
+    --mainTransition: all 0.3s linear;
+  }
 
 $colors:(
     red: #444444,
@@ -12,6 +20,46 @@ body, html{
 }
 
 #main{   
+    .hero{
+        min-height: calc(95vh - 3rem); // navbar height
+        background: url('../media/bcg2.jpg') center/cover no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .banner{
+        text-align: center;
+        background: rgba(255,255,255, 0.8);
+        display: inline-block;
+        padding: 2rem;
+    }
+
+    .banner-title{
+        font-size: 3rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 3rem;
+        color: white;
+    }
+
+    .btn-banner{
+        padding: 1rem 3rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 1rem;
+        background-color: red;
+        border: 1px solid lightcoral;
+        transition: all 0.3s linear;
+        cursor: pointer;
+    }
+
+    .btn-banner:hover{
+        background: transparent;
+        color: var(--primaryColor);
+    }
+
+
     .featHeading{
         text-align: center;
         color: whitesmoke;
