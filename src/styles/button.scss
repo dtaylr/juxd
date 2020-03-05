@@ -1,12 +1,14 @@
 $colors:(
     success: forestgreen,
     alert: red,
-    normal: #540032,
-    text: white,
-    more: #2E112D,
-    more2: #820333,
-    light: #F0433A
+    main: #F2F2F2,
+    drkBlue: #011140,
+    liteBlu: #DFE7F2,
+    SkeyeBlu: #B0C6D9,
+    greyBlye: #7693A6
+
 );
+
 
 .btn{
     font-size: 1em;
@@ -26,22 +28,23 @@ $colors:(
 }
 
 .btn-feat{
-    background-color: map-get($colors, normal);
+    background-color: map-get($colors, SkeyeBlu);
     color: map-get($colors, text);
+    transition: all .3s linear;
 }
 
 .btn-feat:hover{
-    background-color: map-get($colors , light );
+    background-color: map-get($colors , greyBlye );
     color: map-get($colors, text);
 }
 
 .btn-view{
     background-color: transparent;
-    border: 1px solid map-get($colors, deepBlue);
+    border: 1px solid #B0C6D9;
 }
 
 .btn-view:hover{
-    background-color: map-get($colors, more2);
+    background-color: map-get($colors, liteBlu);
 }
 
 .moreContainer{
@@ -75,5 +78,3 @@ $colors:(
     color: black;
     border: none;
 }
-
-

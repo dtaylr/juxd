@@ -1,8 +1,11 @@
-
 $colors:(
-    main: #540032,
-    links: #F0433A
+    main: #F2F2F2,
+    drkBlue: #011140,
+    liteBlu: #DFE7F2,
+    SkeyeBlu: #B0C6D9,
+    greyBlye: #7693A6
 );
+
 
 
 .navbar{
@@ -25,7 +28,7 @@ $colors:(
   align-items: center;
   justify-content: space-between;
   padding: 0 1.5rem;
-  color: white;
+  color: map-get($colors, drkBlue );
 }
 
 .nav-icon{
@@ -51,4 +54,3 @@ $colors:(
 //   color: map-get($colors, links);
 //   transition-duration: 3ms;
 // }
-

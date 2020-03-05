@@ -18,12 +18,14 @@ const Navbar = () => {
                 <span className='nav-icon'>
                     <MdMenu />
                 </span>
-                <a href='/'><h1>The Sto</h1> </a>
+                <Link to='/'>
+                    <h1>The Sto</h1>
+                </Link>
                 <div className='cart-btn'>
                     <span className='nav-icon'>
-                        <a href='/cart'>
-                        <IoMdCart/>
-                        </a>
+                        <Link to='/cart'>
+                            <IoMdCart/>
+                        </Link>
                     </span>
                     <div className='cart-items'>0</div>
                 </div>
