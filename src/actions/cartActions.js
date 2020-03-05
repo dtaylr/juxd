@@ -5,6 +5,10 @@ export const getCart = cartMem => dispatch=>{
 
 }
 
+// export const openCart =()=> dispatch=>{
+//     dispatch({type: types.OPEN_CART, payload: })
+// }
+
 export const add2Cart = (items, product) => dispatch =>{
    const cartItems = items.slice();
 

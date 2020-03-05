@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {MdMenu} from 'react-icons/md'
+import Cart from './Cart'
 import {IoMdCart} from 'react-icons/io'
 // import PropTypes from 'prop-types'
 import {Link} from 'react-router-dom'
@@ -8,7 +9,7 @@ const Navbar = () => {
 
     const [isOpen, setisOpen] = useState(false);
 
-    const toggleLinks = () =>{
+    const toggleOpen = () =>{
         setisOpen(!isOpen)
     }
 
@@ -21,12 +22,12 @@ const Navbar = () => {
                 <Link to='/'>
                     <h1>The Sto</h1>
                 </Link>
-                <div className='cart-btn'>
-                    <span className='nav-icon'>
-                        <Link to='/cart'>
+                <div className='cart-btn' onClick={toggleOpen}>
+                    {isOpen ? <Cart />: <span className='nav-icon'>
+                        {/* <Link to='/cart'> */}
                             <IoMdCart/>
-                        </Link>
-                    </span>
+                        {/* </Link> */}
+                    </span> }
                     <div className='cart-items'>0</div>
                 </div>
             </div>
