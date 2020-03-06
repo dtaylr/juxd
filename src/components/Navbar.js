@@ -4,13 +4,22 @@ import Cart from './Cart'
 import {IoMdCart} from 'react-icons/io'
 // import PropTypes from 'prop-types'
 import {Link} from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 const Navbar = () => {
 
+    const cartMini = useSelector(state => state.cart.cartItems.length)
+
+    console.log(cartMini)
+
     const [isOpen, setisOpen] = useState(false);
 
-    const toggleOpen = () =>{
-        setisOpen(!isOpen)
+    const openCart = () =>{
+        setisOpen(true)
+    }
+
+    const closeCart =()=>{
+        setisOpen(false)
     }
 
     return (
@@ -22,13 +31,14 @@ const Navbar = () => {
                 <Link to='/'>
                     <h1>The Sto</h1>
                 </Link>
-                <div className='cart-btn' onClick={toggleOpen}>
-                    {isOpen ? <Cart />: <span className='nav-icon'>
-                        {/* <Link to='/cart'> */}
+                <div className='cart-btn' onClick={openCart}>
+                    {/* {isOpen ? <Cart />: */}
+                         <span className='nav-icon'> 
+                        <Link to='/cart'>
                             <IoMdCart/>
-                        {/* </Link> */}
-                    </span> }
-                    <div className='cart-items'>0</div>
+                        </Link>
+                    </span> 
+                        <div className='cart-items'>{cartMini}</div>
                 </div>
             </div>
         </nav>

@@ -16,10 +16,10 @@ const CartItem = ({product, items}) => {
            <div className='cartItemDeets'>
             <div className='cartImageContainer'>
                 <img className='cartImage' src={foto} alt='cart pic'/>
+                <h3 className='cartItemTitle'>{title}</h3>
             </div>
-           <h3 className='cartItemTitle'>{title}</h3>
             <div className='cartShipInfo'>
-                {isFreeShipping ? (<p>Free Shipping</p>) : null }
+                {isFreeShipping ? (<p>Free Shipping</p>) : <p>Added at checkout</p> }
                     <div className='cartItem-price-and-quant'>
                      <span>{count} <span>x</span> ${upPrice}</span>
                     </div>        

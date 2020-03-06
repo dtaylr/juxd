@@ -23,7 +23,7 @@ function App() {
           <Route exact path="/products/:prodId" component={ProductDetail}/>
           <Route exact path="/cart" component={Cart}/>
         </Switch>
-        <Footer/>
+        {/* <Footer/> */}
       </Provider>
   );
 }

@@ -29,7 +29,7 @@ const Cart = () => {
     return (
         <div id='wrapper'>
             <section className='cart'>
-                {cartMem.length === 0 ? <p>Cart is Empty</p>: 
+                {cartMem.length === 0 ? (<p className='empty-cart'>Cart is Empty</p>): 
                 <p className='cartHeader'>You have <span className='cartCount'>{cartMem.length}</span> product(s) in your cart<hr/></p>
                     }
                     {cartMem.length && cartMem.map(item=> 
@@ -37,13 +37,14 @@ const Cart = () => {
                             <CartItem product={item} items={items} />
                         </div>
                     )}
-                    <section className='totals'>
-                        <li><span>Sub Total:</span> {cartSubTotal}</li>
-                        <li><span>Tax: </span> {cartTaxTotal}</li>
-                        <li><span>Total: </span> {cartTotal}</li>
-                    </section>
-                    <button className='btn btn-chkout' onClick={()=> dispatch(checkOut(items))}>Checkout</button>
-                </section>
+                    {cartMem.length === 0 ? null : <>
+                      <section className='totals'>
+                                <li><span>Sub Total:</span> {cartSubTotal}</li>
+                                <li><span>Tax: </span> {cartTaxTotal}</li>
+                                <li><span>Total: </span> {cartTotal}</li>
+                            </section>
+                            <button className='btn btn-chkout' onClick={()=> dispatch(checkOut(items))}>Checkout</button> </>}
+            </section>
         </div>
        
     )
