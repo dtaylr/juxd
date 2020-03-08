@@ -1,11 +1,12 @@
 import React, {useEffect} from 'react'
-import {Link} from 'react-router-dom'
-import PropTypes from 'prop-types'
+// import {Link} from 'react-router-dom'
+// import PropTypes from 'prop-types'
 import CartItem from '../components/CartItem'
 import { useSelector, useDispatch } from 'react-redux'
-import {checkOut} from '../actions/cartActions'
+import {checkOut, getCart} from '../actions/cartActions'
 
 const Cart = () => {
+
 
     const dispatch = useDispatch()
     const items = useSelector(state => state.cart.cartItems)
@@ -16,6 +17,12 @@ const Cart = () => {
         return '$' + Number(num.toFixed(2)).toLocaleString() + ' ';
     }
 
+    useEffect(()=>{
+        dispatch(getCart(cartMem))
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [dispatch])
+
+
     let subTotal = cartMem.reduce((a,c)=> a + c.price * c.count, 0)
     
     let tax = subTotal * 0.08
@@ -24,7 +31,7 @@ const Cart = () => {
 
     let cartTaxTotal = formatCurrency(tax)
     let cartSubTotal= formatCurrency(subTotal)
-    let cartTotal = formatCurrency(total)
+    let cartTotal = formatCurrency(total)   
 
     return (
         <div id='wrapper'>
@@ -50,8 +57,8 @@ const Cart = () => {
     )
 }
 
-Cart.propTypes = {
+// Cart.propTypes = {
 
-}
+// }
 
 export default Cart

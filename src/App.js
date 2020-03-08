@@ -9,7 +9,7 @@ import Products from './pages/Products'
 import ProductDetail from './pages/ProductDetail';
 import { Switch, Route } from 'react-router';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 
 
 

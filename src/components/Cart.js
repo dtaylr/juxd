@@ -1,8 +1,6 @@
 import React, {useState} from 'react'
 import {FaRegWindowClose,FaChevronUp, FaChevronDown } from 'react-icons/fa'
 
-
-
 const Cart = () => {
 
     const [isClosed, setIsClosed] = useState(true)

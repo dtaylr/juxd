@@ -23,6 +23,11 @@ export default function (state = initialState, {type, payload}){
                 ...state,
                 cartItems: console.log(payload)
             }
+        case types.GET_CART:
+            return{
+                ...state,
+                cartItems: payload
+            }
             default:
                 return{
                     ...state

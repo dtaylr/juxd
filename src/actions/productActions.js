@@ -4,7 +4,6 @@ import products from '../data'
 const api = products
 
 export const getProds=()=> dispatch =>{
-    console.log('fetchin')
     dispatch({type: types.GET_PRODUCTS, payload: api}) 
 }
 // const api = 'http://localhost:8000/products'

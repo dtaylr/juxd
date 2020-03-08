@@ -1,7 +1,7 @@
 import React from 'react'
-import Counter from './Counter'
+// import Counter from './Counter'
 import { useDispatch } from 'react-redux'
-import {add2Cart, removeFromCart} from '../actions/cartActions';
+import {removeFromCart} from '../actions/cartActions';
 
 const CartItem = ({product, items}) => {
 
@@ -24,7 +24,7 @@ const CartItem = ({product, items}) => {
                      <span>{count} <span>x</span> ${upPrice}</span>
                     </div>        
                 <div className='cartBtnContainer'>
-                    <Counter price={price} count={count}/>
+                    {/* <Counter price={price} count={count}/> */}
                 <button className='btn btn-alert' onClick={()=>dispatch(removeFromCart(items, product))}>Delete</button>
             </div> 
             </div>

@@ -2,7 +2,7 @@ import * as types from '../types'
 
 export const getCart = cartMem => dispatch=>{
     dispatch({type: types.GET_CART, payload: cartMem})
-
+    console.log(cartMem)
 }
 
 // export const openCart =()=> dispatch=>{

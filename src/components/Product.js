@@ -1,9 +1,8 @@
 import React from 'react'
 import {IoMdCart} from 'react-icons/io'
-import {Link} from 'react-router-dom'
-import PropTypes from 'prop-types'
-import {getDetails} from '../actions/productActions'
-import { useDispatch } from 'react-redux'
+// import {Link} from 'react-router-dom'
+// import PropTypes from 'prop-types'
+// import { useDispatch } from 'react-redux'
 
 const Product = ({product}) => {
     
@@ -23,14 +22,13 @@ const Product = ({product}) => {
                     <p className='prod-price'>${price}</p>
                     {isFreeShipping ? <p>Free Shipping</p> :<p><span className='shipSpan'>+</span> Shipping</p>}
                 </div>
-            
             </div>
         </div>
     )
 }
 
-Product.propTypes = {
+// Product.propTypes = {
 
-}
+// }
 
 export default Product

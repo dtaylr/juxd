@@ -24,7 +24,7 @@ $colors:(
 
 .btn a{
     text-decoration: none;
-    color: goldenrod;
+    color: map-get($colors,drkBlue);
 }
 
 .btn-feat{
@@ -34,17 +34,17 @@ $colors:(
 }
 
 .btn-feat:hover{
-    background-color: map-get($colors, greyBlye );
-    color: map-get($colors, success);
+    // background-color: map-get($colors, greyBlye );
+    color: map-get($colors, greyBlye);
 }
 
 .btn-view{
     background-color: transparent;
-    border: 1px solid #B0C6D9;
+    border: 1px solid #011140;
 }
 
 .btn-view:hover{
-    background-color: map-get($colors, liteBlu);
+    background-color:white;
 }
 
 .moreContainer{

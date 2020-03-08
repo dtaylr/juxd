@@ -1,10 +1,11 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {MdMenu} from 'react-icons/md'
-import Cart from './Cart'
 import {IoMdCart} from 'react-icons/io'
-// import PropTypes from 'prop-types'
 import {Link} from 'react-router-dom'
 import { useSelector } from 'react-redux'
+// import Cart from './Cart'
+// import PropTypes from 'prop-types'
+
 
 const Navbar = () => {
 
@@ -12,15 +13,23 @@ const Navbar = () => {
 
     console.log(cartMini)
 
-    const [isOpen, setisOpen] = useState(false);
+    // let cartMem = JSON.parse(localStorage.getItem('cartItems')); // get the data
+    // console.log(cartMem)
 
-    const openCart = () =>{
-        setisOpen(true)
-    }
+    // const [isOpen, setisOpen] = useState(false);
 
-    const closeCart =()=>{
-        setisOpen(false)
-    }
+    // const openCart = () =>{
+    //     setisOpen(true)
+    // }
+
+    // const closeCart =()=>{
+    //     setisOpen(false)
+    // }
+
+    // useEffect(()=>{
+    //     dispatch(getCart(cartMem))
+    //     // console.log(cartMem)
+    // }, [dispatch])
 
     return (
         <nav className='navbar'>
@@ -31,33 +40,18 @@ const Navbar = () => {
                 <Link to='/'>
                     <h1>The Sto</h1>
                 </Link>
-                <div className='cart-btn' onClick={openCart}>
+                <div className='cart-btn'>
                     {/* {isOpen ? <Cart />: */}
                          <span className='nav-icon'> 
                         <Link to='/cart'>
-                            <IoMdCart/>
+                            <IoMdCart className='cart-logo'/>
                         </Link>
                     </span> 
-                        <div className='cart-items'>{cartMini}</div>
+                    {cartMini === 0 ? null : <div className='cart-items'>{cartMini}</div>}
                 </div>
             </div>
         </nav>
-        // <section className='navbar'>
-        //     <div className='navbar-center'>
-        //         {/* <button type="button" className='nav-btn' onClick={toggleLinks}/> */}
-        //         <ul className={isOpen ? 'nav-links show-nav' : 'nav-links' }>
-        //         <li>
-        //            <Link to='/'>Burger</Link> 
-        //         </li>
-        //         <li>
-        //             <Link to='/products'>Logo</Link>
-        //         </li>  
-        //         <li>
-        //             <Link to='/cart'>Cart</Link>
-        //         </li>          
-        //     </ul>
-        //     </div>
-        // </section>
+      
     )
 }
 

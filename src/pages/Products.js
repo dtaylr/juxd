@@ -1,10 +1,10 @@
 import React, {useEffect} from 'react'
 import {useSelector, useDispatch} from 'react-redux';
 import {Link} from 'react-router-dom'
-import {getProds, sizeFilter} from '../actions/productActions'
+import {getProds} from '../actions/productActions'
 import {add2Cart} from '../actions/cartActions';
 import {getDetails} from '../actions/productActions';
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import Product from '../components/Product';
 import Filter from '../components/Filter';
 

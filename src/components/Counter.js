@@ -1,14 +1,14 @@
 import React from 'react'
-import {useDispatch, useSelector} from 'react-redux'
-import {addItem, minItem} from '../actions/productActions'
+import {useDispatch} from 'react-redux'
+import {addItem} from '../actions/productActions'
 
 const Counter = ({count, price}) => {
 
     const dispatch = useDispatch()
 
-    const updated = (update)=>{
-        console.log(update)
-    }
+    // const updated = (update)=>{
+    //     console.log(update)
+    // }
     return (
         <div className='counter'>
             <label htmlFor='counter'>Quantity: </label>

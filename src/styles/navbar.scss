@@ -6,8 +6,6 @@ $colors:(
     greyBlye: #7693A6
 );
 
-
-
 .navbar{
   background-color: map-get($colors, main );
   z-index: 1;
@@ -31,23 +29,26 @@ $colors:(
   color: map-get($colors, drkBlue );
 }
 
-.nav-icon{
+.nav-icon,
+.cart-logo{
   font-size: 1.5rem;
+  color:map-get($colors, drkBlue );
 }
 
 .cart-btn{
   position: relative;
   cursor: pointer;
+  color: black;
 }
 
 .cart-items{
   position: absolute;
   top: -8px;
   right: -8px;
-  // background-color: pink;
+  background-color: rgba(255, 255, 255, 0.5);
   padding: 0 5px;
   border-radius: 30%;
-  color: red
+  color: firebrick;
 }
 
 // .nav-links a:hover{

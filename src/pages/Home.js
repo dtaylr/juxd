@@ -3,7 +3,7 @@ import {getProds} from '../actions/productActions'
 import {Link} from 'react-router-dom';
 import {useDispatch,useSelector} from 'react-redux'
 import {getDetails} from '../actions/productActions'
-import store2 from '../media/store.jpg'
+// import store2 from '../media/store.jpg'
 import Product from '../components/Product'
 import { add2Cart } from '../actions/cartActions'
 
@@ -16,7 +16,6 @@ const Home = () => {
 
     useEffect(()=>{
         dispatch(getProds())
-        window.scrollTo(0, 0)
     }, [dispatch])
 
     return (
@@ -24,7 +23,7 @@ const Home = () => {
           <header className='hero'>
             <div className='banner'>
                 <h1 className='banner-title'>New Collections</h1>
-                <a href='/products'> <button className='btn-banner'>See More</button> </a>
+                <button className='btn-banner'><Link to='/products'>See More</Link></button> 
             </div>
           </header>
           <h1 className='featHeading'>Featured</h1>
