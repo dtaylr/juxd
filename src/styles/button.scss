@@ -22,9 +22,11 @@ $colors:(
     cursor: pointer;
 }
 
+
+
 .btn a{
-    text-decoration: none;
-    color: map-get($colors,drkBlue);
+    color: white;
+    transition: all .3s linear;
 }
 
 .btn-feat{
@@ -34,17 +36,16 @@ $colors:(
 }
 
 .btn-feat:hover{
-    // background-color: map-get($colors, greyBlye );
     color: map-get($colors, greyBlye);
 }
 
 .btn-view{
-    background-color: transparent;
+    background-color: map-get($colors,greyBlye );
     border: 1px solid #011140;
 }
 
 .btn-view:hover{
-    background-color:white;
+    background-color:map-get($colors, success );
 }
 
 .moreContainer{

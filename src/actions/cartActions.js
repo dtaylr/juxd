@@ -23,6 +23,7 @@ export const add2Cart = (items, product) => dispatch =>{
             cartItems.push({...product, count: 1});
         }
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        alert(`Added ${product.title} to cart!`)
         return dispatch({type: types.ADD_TO_CART, payload:{
             cartItems: cartItems
         }
@@ -34,6 +35,7 @@ export const removeFromCart = (items, product) => dispatch =>{
     console.log(product)
     const cartItems = items.filter(elm=> elm.id !== product.id)
     localStorage.setItem('cartItems', JSON.stringify(cartItems))
+    alert(`Removed ${product.title} to cart!`)
     return dispatch({type: types.REMOVE_ITEM, payload:{
         cartItems
     }})

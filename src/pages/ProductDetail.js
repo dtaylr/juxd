@@ -1,6 +1,5 @@
 import React from 'react'
 import {useSelector, useDispatch} from 'react-redux'
-import {Link} from 'react-router-dom'
 import {add2Cart} from '../actions/cartActions'
 // import PropTypes from 'prop-types'
 // import Counter from '../components/Counter';
@@ -33,7 +32,7 @@ const ProductDetail = () => {
                 <p className='detailSKU'>SKU: {sku}</p>
             </section>
              {/* <Counter count={count}/> */}
-             <button onClick={()=> dispatch(add2Cart(items, item))}className='btn btn-feat'><Link to='/cart'>Add To Cart</Link></button>
+             <button onClick={()=> dispatch(add2Cart(items, item))}className='btn btn-feat'>Add to Cart</button>
         </div>
     )
 }

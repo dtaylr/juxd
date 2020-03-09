@@ -5,18 +5,20 @@ import {useDispatch,useSelector} from 'react-redux'
 import {getDetails} from '../actions/productActions'
 // import store2 from '../media/store.jpg'
 import Product from '../components/Product'
-import { add2Cart } from '../actions/cartActions'
+// import { add2Cart } from '../actions/cartActions'
 
 const Home = () => {
 
     const dispatch = useDispatch()
 
     const prods = useSelector(state => state.products.items)
-    const items = useSelector(state => state.cart.cartItems)
+    // const items = useSelector(state => state.cart.cartItems)
 
     useEffect(()=>{
         dispatch(getProds())
     }, [dispatch])
+
+    // <Link to={`/products/${product.id}`}>
 
     return (
         <div className='main' id='main'>
@@ -35,8 +37,8 @@ const Home = () => {
                         <Product product={product}/>
                         </div>
                         <div className='featBtn-container'>
-                            <button className='btn btn-view' onClick={()=> dispatch(getDetails(product))}><Link to={{pathname:`/products/${product.id}`}}> View More </Link> </button>
-                            <button className='btn btn-feat' onClick={()=> dispatch(add2Cart(items, product))}>Add to Cart</button>
+                            <button className='btn btn-view' onClick={()=> dispatch(getDetails(product))}><Link to={`/products/${product.id}`}>View More </Link> </button>
+                            {/* <button className='btn btn-feat' onClick={()=> dispatch(add2Cart(items, product))}>Add to Cart</button> */}
                         </div>
                    </div> )
                 )}
