@@ -2,9 +2,7 @@ import React from 'react'
 import {IoMdCart} from 'react-icons/io'
 import {add2Cart} from '../actions/cartActions'
 import { useDispatch, useSelector } from 'react-redux'
-// import {Link} from 'react-router-dom'
 // import PropTypes from 'prop-types'
-// import { useDispatch } from 'react-redux'
 
 const Product = ({product}) => {
 

@@ -38,7 +38,7 @@ const Navbar = () => {
                     <MdMenu />
                 </span>
                 <Link to='/'>
-                    <h1>The Sto</h1>
+                    <h1>Shopper</h1>
                 </Link>
                 <div className='cart-btn'>
                     {/* {isOpen ? <Cart />: */}
