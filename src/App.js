@@ -9,6 +9,7 @@ import Products from './pages/Products'
 import ProductDetail from './pages/ProductDetail';
 import { Switch, Route } from 'react-router';
 import Navbar from './components/Navbar';
+import Scroll from './components/Scroll';
 // import Footer from './components/Footer';
 
 
@@ -16,13 +17,14 @@ import Navbar from './components/Navbar';
 function App() {
   return (
       <Provider store={store}>
-      <Navbar/>
-        <Switch>
-          <Route exact path="/" component={Home}/>
-          <Route exact path='/products' component={Products}/>
-          <Route exact path="/products/:prodId" component={ProductDetail}/>
-          <Route exact path="/cart" component={Cart}/>
-        </Switch>
+        <Scroll/>  
+          <Navbar/>
+            <Switch>
+              <Route exact path="/" component={Home}/>
+              <Route exact path='/products' component={Products}/>
+              <Route exact path="/products/:prodId" component={ProductDetail}/>
+              <Route exact path="/cart" component={Cart}/>
+            </Switch>
         {/* <Footer/> */}
       </Provider>
   );

@@ -18,8 +18,6 @@ const Home = () => {
         dispatch(getProds())
     }, [dispatch])
 
-    // <Link to={`/products/${product.id}`}>
-
     return (
         <div className='main' id='main'>
           <header className='hero'>
