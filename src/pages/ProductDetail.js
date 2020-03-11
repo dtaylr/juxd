@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import {add2Cart} from '../actions/cartActions'
+// import { getDetails } from '../actions/productActions'
 // import PropTypes from 'prop-types'
 // import Counter from '../components/Counter';
 
@@ -13,6 +14,11 @@ const ProductDetail = () => {
     const items = useSelector(state => state.cart.cartItems)
 
     const {sku, title, foto, description, availableSizes, price, isFreeShipping} = item
+
+    // useEffect(() => {
+    //     window.location.reload();
+    //     console.log(window.location);
+    // }, [])
 
     return (
         <div id='prodDetailContainer'>
