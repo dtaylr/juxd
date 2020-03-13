@@ -2,7 +2,7 @@ import React, {useEffect} from 'react'
 import {useLocation} from 'react-router-dom';
 // import PropTypes from 'prop-types'
 
-const ScrollToTop = () => {
+const Scroll = () => {
 
 const { pathname } = useLocation();
 
@@ -16,4 +16,4 @@ const { pathname } = useLocation();
 
 // }
 
-export default ScrollToTop
+export default Scroll

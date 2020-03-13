@@ -14,10 +14,12 @@ const ProductDetail = () => {
     const items = useSelector(state => state.cart.cartItems)
 
     const {sku, title, foto, description, availableSizes, price, isFreeShipping} = item
+    console.log(foto)
+
+    // const flame  = 
 
     // useEffect(() => {
-    //     window.location.reload();
-    //     console.log(window.location);
+    //     localStorage.getItem()
     // }, [])
 
     return (

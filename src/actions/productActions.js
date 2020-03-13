@@ -27,7 +27,7 @@ export const filterHandler = (items, size) => dispatch =>{
 
 
 export const listProds = (items, sort) => dispatch =>{
-    console.log("yolang")
+    // console.log("yolang")
     // const products = items.slice();
     if(sort !== ''){
         items.sort((a,b) => (sort === 'lowest') ?
@@ -42,17 +42,17 @@ export const listProds = (items, sort) => dispatch =>{
 }
 
 export const getDetails  = product => dispatch => {
-    console.log(product)
+    // console.log(product)
   return dispatch({type: types.GET_ITEM, payload: product})
 }
 
 export const addItem = count => dispatch =>{
-    console.log('plus')
+    // console.log('plus')
     dispatch({type: types.INCREMENT, payload: count})
 }
 
 export const minItem = count => dispatch=>{
-    console.log('removing one')
+    // console.log('removing one')
     dispatch({type: types.DECREMENT, payload: count})
 }
 
