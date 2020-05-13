@@ -7,7 +7,6 @@ import {checkOut, getCart} from '../actions/cartActions'
 
 const Cart = () => {
 
-
     const dispatch = useDispatch()
     const items = useSelector(state => state.cart.cartItems)
 
@@ -44,13 +43,14 @@ const Cart = () => {
                             <CartItem product={item} items={items} />
                         </div>
                     )}
-                    {cartMem.length === 0 ? null : <>
+                    {cartMem.length === 0 || null ? null : <>
                       <section className='totals'>
                                 <li><span>Sub Total:</span> {cartSubTotal}</li>
                                 <li><span>Tax: </span> {cartTaxTotal}</li>
                                 <li><span>Total: </span> {cartTotal}</li>
                             </section>
-                            <button className='btn btn-chkout' onClick={()=> dispatch(checkOut(items))}>Checkout</button> </>}
+                            <button className='btn btn-chkout' onClick={()=> dispatch(checkOut(items))}>Checkout</button> 
+                            </>}
             </section>
         </div>
        

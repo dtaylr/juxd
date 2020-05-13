@@ -6,8 +6,7 @@ const middleware = [thunk]
 
 const initialState = {};
 if(localStorage.getItem('cartItems')){
-	initialState.cart ={items: JSON.parse(localStorage.getItem('cartItems'))}
-	console.log(localStorage)
+	initialState.cart = {cartItems: JSON.parse(localStorage.getItem('cartItems'))}
 }
 
 
