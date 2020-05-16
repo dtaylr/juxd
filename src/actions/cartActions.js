@@ -2,7 +2,6 @@ import * as types from '../types'
 
 export const getCart = cartMem => dispatch=>{
     dispatch({type: types.GET_CART, payload: cartMem})
-    console.log(cartMem)
 }
 
 // export const openCart =()=> dispatch=>{
@@ -32,7 +31,6 @@ export const add2Cart = (items, product) => dispatch =>{
 
 
 export const removeFromCart = (items, product) => dispatch =>{
-    console.log(product)
     const cartItems = items.filter(elm=> elm.id !== product.id)
     localStorage.setItem('cartItems', JSON.stringify(cartItems))
     alert(`Removed ${product.title} to cart!`)

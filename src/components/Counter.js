@@ -11,8 +11,8 @@ const Counter = ({count, price}) => {
     // }
     return (
         <div className='counter'>
-            <label htmlFor='counter'>Quantity: </label>
-            <select id='quant' value={count} onChange={(e) => dispatch(addItem(price, e.target.value))}>
+            <label htmlFor='counter' data-test-id='counter'>Quantity: </label>
+            <select id='quant' value={count} data-test-id='click' onChange={(e) => dispatch(addItem(price, e.target.value))}>
                 <option value={count}>1</option>
                 <option value={count}>2</option>
                 <option>3</option>

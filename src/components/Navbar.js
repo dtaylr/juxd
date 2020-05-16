@@ -1,35 +1,33 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {MdMenu} from 'react-icons/md'
 import {IoMdCart} from 'react-icons/io'
+import {getCart} from '../actions/cartActions'
 import {Link} from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 // import Cart from './Cart'
 // import PropTypes from 'prop-types'
 
 
 const Navbar = () => {
+    
+        let cartMini = useSelector(state => state.cart.cartItems.length)
+        let cartMem = JSON.parse(localStorage.getItem('cartItems')) || []
 
-    const cartMini = useSelector(state => state.cart.cartItems.length)
+        const dispatch = useDispatch();
 
-    console.log(cartMini)
+        // const cartCheck = (cartTest) => {
+        //     let cartMem = JSON.parse(localStorage.getItem('cartItems'))
+        //     if (cartMem) { //always ask if exist the localStorage =D
+        //          cartTest = cartMem.length
+        //         }else{
+        //             cartTest = []
+        //         }
+        //         return cartTest
+        // }
 
-    // let cartMem = JSON.parse(localStorage.getItem('cartItems')); // get the data
-    // console.log(cartMem)
-
-    // const [isOpen, setisOpen] = useState(false);
-
-    // const openCart = () =>{
-    //     setisOpen(true)
-    // }
-
-    // const closeCart =()=>{
-    //     setisOpen(false)
-    // }
-
-    // useEffect(()=>{
-    //     dispatch(getCart(cartMem))
-    //     // console.log(cartMem)
-    // }, [dispatch])
+    useEffect(()=>{
+        dispatch(getCart(cartMem)) //for nav count
+    }, [])
 
     return (
         <nav className='navbar'>

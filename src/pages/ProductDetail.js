@@ -1,25 +1,24 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import {add2Cart} from '../actions/cartActions'
-// import { getDetails } from '../actions/productActions'
-// import PropTypes from 'prop-types'
+// import {hydratePage} from '../actions/pageActions';
 // import Counter from '../components/Counter';
 
 const ProductDetail = () => {
 
     const dispatch = useDispatch()
+
+    const lastPage = useSelector(state => state.products.hydrate)
+    console.log(lastPage)
    
     const item = useSelector(state => state.products.prodId)
 
     const items = useSelector(state => state.cart.cartItems)
 
-    const {sku, title, foto, description, availableSizes, price, isFreeShipping} = item
-    console.log(foto)
-
-    // const flame  = 
+    const {sku, title, foto, description, availableSizes, price, isFreeShipping} = lastPage 
 
     // useEffect(() => {
-    //     localStorage.getItem()
+    //     dispatch(hydratePage(item))
     // }, [])
 
     return (

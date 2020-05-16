@@ -3,7 +3,7 @@ import products from '../data'
 
 const api = products
 
-export const getProds=()=> dispatch =>{
+export const getProds = () => dispatch =>{
     dispatch({type: types.GET_PRODUCTS, payload: api}) 
 }
 // const api = 'http://localhost:8000/products'
@@ -25,10 +25,7 @@ export const filterHandler = (items, size) => dispatch =>{
     }})
 }
 
-
 export const listProds = (items, sort) => dispatch =>{
-    // console.log("yolang")
-    // const products = items.slice();
     if(sort !== ''){
         items.sort((a,b) => (sort === 'lowest') ?
         (a.price > b.price ? 1: 1) : (a.price < b.price ? 1: -1));
@@ -42,17 +39,15 @@ export const listProds = (items, sort) => dispatch =>{
 }
 
 export const getDetails  = product => dispatch => {
-    // console.log(product)
+   localStorage.setItem('pageDetails', JSON.stringify(product));
   return dispatch({type: types.GET_ITEM, payload: product})
 }
 
 export const addItem = count => dispatch =>{
-    // console.log('plus')
     dispatch({type: types.INCREMENT, payload: count})
 }
 
 export const minItem = count => dispatch=>{
-    // console.log('removing one')
     dispatch({type: types.DECREMENT, payload: count})
 }
 

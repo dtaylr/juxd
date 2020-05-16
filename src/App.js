@@ -10,13 +10,14 @@ import ProductDetail from './pages/ProductDetail';
 import { Switch, Route } from 'react-router';
 import Navbar from './components/Navbar';
 import Scroll from './components/Scroll';
+// import { PersistGate } from 'redux-persist/integration/react';
 // import Footer from './components/Footer';
-
 
 
 function App() {
   return (
       <Provider store={store}>
+        {/* <PersistGate loading={null} persistor={persistor}> */}
         <Scroll/>  
           <Navbar/>
             <Switch>
@@ -26,6 +27,7 @@ function App() {
               <Route exact path="/cart" component={Cart}/>
             </Switch>
         {/* <Footer/> */}
+        {/* </PersistGate> */}
       </Provider>
   );
 }
