@@ -6,6 +6,7 @@ const initialState = {
     sort:'',
     size: '',
     prodId: {},
+    hydrate: {}
  }
 
 export default function (state = initialState, {payload,type}){
@@ -32,7 +33,13 @@ export default function (state = initialState, {payload,type}){
             return{
                 ...state,
                 // prodId: console.log(payload)
-                prodId: payload
+                prodId: payload,
+                hydrate: payload
+            }
+        case types.REHYDRATE:
+            return{
+                ...state,
+                hydrate: payload
             }
         case types.INCREMENT:
             return{
@@ -46,6 +53,5 @@ export default function (state = initialState, {payload,type}){
             }
             default:
                 return state;
-
     }  
 }
