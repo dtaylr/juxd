@@ -3,7 +3,7 @@ import React, {useEffect} from 'react'
 // import PropTypes from 'prop-types'
 import CartItem from '../components/CartItem'
 import { useSelector, useDispatch } from 'react-redux'
-import {checkOut, getCart} from '../actions/cartActions'
+import {checkOut} from '../actions/cartActions'
 
 const Cart = () => {
 
@@ -16,10 +16,10 @@ const Cart = () => {
         return '$' + Number(num.toFixed(2)).toLocaleString() + ' ';
     }
 
-    useEffect(()=>{
-        dispatch(getCart(cartMem))
+    // useEffect(()=>{
+        // dispatch(getCart(cartMem))
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [dispatch])
+    // }, [dispatch])
 
 
     let subTotal = cartMem.reduce((a,c)=> a + c.price * c.count, 0)

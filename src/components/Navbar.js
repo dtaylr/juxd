@@ -25,9 +25,8 @@ const Navbar = () => {
         //         return cartTest
         // }
 
-    
     useEffect(()=>{
-        dispatch(getCart(cartMem))
+        dispatch(getCart(cartMem)) //for nav count
     }, [])
 
     return (
