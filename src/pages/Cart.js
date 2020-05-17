@@ -36,7 +36,7 @@ const Cart = () => {
         <div id='wrapper'>
             <section className='cart'>
                 {cartMem.length === 0 ? (<p className='empty-cart'>Cart is Empty</p>): 
-                <p className='cartHeader'>You have <span className='cartCount'>{cartMem.length}</span> product(s) in your cart<hr/></p>
+                (<p className='cartHeader'>You have <span className='cartCount'>{cartMem.length}</span> product(s) in your cart<hr/></p>)
                     }
                     {cartMem.length && cartMem.map(item=> 
                         <div key={item.id} className='cartItems'>
