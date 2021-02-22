@@ -1,1 +1,1 @@
-Simple E-commerce store with React
+Simple E-commerce store with React and Redux
