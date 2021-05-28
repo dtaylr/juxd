@@ -9,7 +9,7 @@ const CartItem = ({product, items}) => {
 
     const {count, title, price, foto, isFreeShipping} = product
 
-    let upPrice = count * price
+    // let upPrice = count * price
  
     return (
         <div className='cartItem'>
@@ -21,7 +21,7 @@ const CartItem = ({product, items}) => {
             <div className='cartShipInfo'>
                 {isFreeShipping ? (<p>Free Shipping</p>) : <p>Added at checkout</p> }
                     <div className='cartItem-price-and-quant'>
-                     <span>{count} <span>x</span> ${upPrice}</span>
+                     <span>{count} <span>x</span> ${price}</span>
                     </div>        
                 <div className='cartBtnContainer'>
                     {/* <Counter price={price} count={count}/> */}

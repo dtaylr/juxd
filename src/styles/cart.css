@@ -1,0 +1,123 @@
+:root {
+  --mainTransition: all .3s linear;
+}
+
+#wrapper {
+  list-style: none;
+}
+
+#wrapper li {
+  margin-bottom: 1rem;
+}
+
+#wrapper .cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 85%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#wrapper .cartHeader {
+  font-size: 1.7rem;
+  margin: 2rem;
+}
+
+#wrapper .cartCount {
+  color: red;
+}
+
+#wrapper .empty-cart {
+  text-align: center;
+  margin-top: 50%;
+}
+
+#wrapper .cartItem-price-and-quant {
+  margin-left: 1rem;
+}
+
+#wrapper .cartImageContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100px;
+  height: 100px;
+  margin: 2rem 0;
+}
+
+#wrapper .cartImage {
+  width: 100%;
+  height: 100%;
+  margin-right: 2rem;
+}
+
+#wrapper .cartShipInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#wrapper .cartItems {
+  border-bottom: 3px solid black;
+  margin-bottom: 2rem;
+}
+
+#wrapper .cartItem {
+  margin-bottom: 1rem;
+}
+
+#wrapper .cartItemTitle {
+  margin: 1rem 0;
+  letter-spacing: 1px;
+}
+
+#wrapper .cartItem p {
+  padding: 0 .5rem;
+}
+
+#wrapper .cartBtnContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 3rem;
+  margin-right: 1rem;
+}
+
+#wrapper .totals {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#wrapper .totals li {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#wrapper .totals span {
+  margin-right: .5rem;
+}
+
+#wrapper .btn-chkout {
+  background-color: #011140;
+  color: orangered;
+}
+
+#wrapper .btn-chkout:hover {
+  color: white;
+}
+/*# sourceMappingURL=cart.css.map */

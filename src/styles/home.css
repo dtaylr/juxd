@@ -1,0 +1,118 @@
+:root {
+  --primaryColor: #f09d51;
+  --mainWhite: #fff;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 0.3s linear;
+}
+
+body, html {
+  height: 100%;
+}
+
+#main .hero {
+  min-height: calc(95vh - 3rem);
+  background: url("../media/bcg2.jpg") center/cover no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#main .banner {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.4);
+  display: inline-block;
+  padding: 3rem;
+}
+
+@media (max-width: 599px) {
+  #main .banner {
+    padding: 1rem .5rem;
+  }
+}
+
+#main .banner-title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+#main .btn-banner {
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Contrail One', 'Acme', cursive;
+  font-size: 1rem;
+  background-color: #DFE7F2;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  border: none;
+}
+
+#main .btn-banner:hover {
+  background: transparent;
+  color: #011140;
+}
+
+#main .featHeading {
+  text-align: center;
+  color: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 3.7em;
+  letter-spacing: 2px;
+  margin-bottom: 1.5em;
+  background-color: #011140;
+}
+
+#main .featContainer {
+  width: 98%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#main .featList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#main .prod {
+  padding-bottom: 3em;
+  -ms-flex-preferred-size: 300px;
+      flex-basis: 300px;
+}
+
+.homeBg {
+  width: 100%;
+  height: 85vh;
+  margin-bottom: 5rem;
+}
+
+.heroGrid {
+  width: 100%;
+}
+/*# sourceMappingURL=home.css.map */

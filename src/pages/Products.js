@@ -25,15 +25,25 @@ const Products = () => {
     return (
         <div id='productsWrapper'>
             <div className='filterContainer'>   
-                <Filter sort={sort} size={size} filteredProds={filteredProds}/>
+                <Filter 
+                    sort={sort} 
+                    size={size} 
+                    filteredProds={filteredProds}
+                />
             </div>
             <h2 className='products-title'>All Products</h2>
         <section className="prodContainer">
-        {filteredProds.map(product=> (
+        {filteredProds.map(product => (
             <div key={product.id}>
                 <Product product={product}/>
                 <div className='featBtn-container'>
-                    <button className='btn btn-view' onClick={()=> dispatch(getDetails(product))}><Link to={{pathname:`/products/${product.id}`}}> View More </Link> </button>
+                    <button 
+                        className='btn btn-view' 
+                        onClick={()=> dispatch(getDetails(product))}>
+                            <Link 
+                                to={{pathname:`/products/${product.id}`}}>View More
+                            </Link>
+                    </button>
                     {/* <button className='btn btn-feat' onClick={()=> dispatch(add2Cart(items, product))}>Add to Cart</button> */}
                 </div>
             </div>))}

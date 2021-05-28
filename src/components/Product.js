@@ -17,9 +17,12 @@ const Product = ({product}) => {
                 <h2 className='prod-title'>{title}</h2>
                 <div id='prodImg-container'>
                     <img className='prodImg' src={foto} alt='featured pic'/>
-                    <button className='btn-bag' onClick={()=> dispatch(add2Cart(items, product))}>
-                        <IoMdCart/>
-                        Bag It</button>
+                    <button 
+                        className='btn-bag' 
+                        onClick={()=> dispatch(add2Cart(items, product))}
+                        >
+                        <IoMdCart/> Bag It
+                    </button>
                 </div>
                 <div className='price-ship-desc'>
                     <p className='prod-price'>${price}</p>

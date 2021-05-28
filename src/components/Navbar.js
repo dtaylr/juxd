@@ -4,26 +4,19 @@ import {IoMdCart} from 'react-icons/io'
 import {getCart} from '../actions/cartActions'
 import {Link} from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
-// import Cart from './Cart'
 // import PropTypes from 'prop-types'
 
 
 const Navbar = () => {
     
-        let cartMini = useSelector(state => state.cart.cartItems.length)
-        let cartMem = JSON.parse(localStorage.getItem('cartItems')) || []
+    let currentCart = useSelector(state => state.cart.cartItems)
 
-        const dispatch = useDispatch();
+    let cartMem = JSON.parse(localStorage.getItem('cartItems')) || []
 
-        // const cartCheck = (cartTest) => {
-        //     let cartMem = JSON.parse(localStorage.getItem('cartItems'))
-        //     if (cartMem) { //always ask if exist the localStorage =D
-        //          cartTest = cartMem.length
-        //         }else{
-        //             cartTest = []
-        //         }
-        //         return cartTest
-        // }
+    let cartMini = currentCart.reduce((a,c) => a += c.count, 0);
+
+    const dispatch = useDispatch();
+
 
     useEffect(()=>{
         dispatch(getCart(cartMem)) //for nav count

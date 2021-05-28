@@ -1,0 +1,52 @@
+#productsWrapper .products-title {
+  text-align: center;
+  margin: 2em 0;
+  font-size: 3rem;
+}
+
+#productsWrapper .prodContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (300px)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 300px);
+  grid-gap: 2rem;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90vw;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#productsWrapper .btn {
+  margin: 1em 0 2em 0;
+}
+
+.filterContainer {
+  background-color: #011140;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2em;
+  padding: 2em 2em;
+}
+
+.filter p::first-letter {
+  color: red;
+}
+
+.selections,
+.selects {
+  margin-left: 1em;
+  margin-top: 1.3em;
+  background-color: #B0C6D9;
+}
+/*# sourceMappingURL=products.css.map */

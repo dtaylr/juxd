@@ -12,7 +12,7 @@ const Cart = () => {
 
     let cartMem = JSON.parse(localStorage.getItem('cartItems')); // get the data
 
-    const formatCurrency = num =>{
+    const formatCurrency = num => {
         return '$' + Number(num.toFixed(2)).toLocaleString() + ' ';
     }
 
@@ -20,7 +20,6 @@ const Cart = () => {
         // dispatch(getCart(cartMem))
         // eslint-disable-next-line react-hooks/exhaustive-deps
     // }, [dispatch])
-
 
     let subTotal = cartMem.reduce((a,c)=> a + c.price * c.count, 0)
     
@@ -35,7 +34,7 @@ const Cart = () => {
     return (
         <div id='wrapper'>
             <section className='cart'>
-                {cartMem.length === 0 ? (<p className='empty-cart'>Cart is Empty</p>): 
+                {!cartMem.length ? (<p className='empty-cart'>Cart is Empty</p>): 
                 (<p className='cartHeader'>You have <span className='cartCount'>{cartMem.length}</span> product(s) in your cart<hr/></p>)
                     }
                     {cartMem.length && cartMem.map(item=> 
@@ -50,7 +49,7 @@ const Cart = () => {
                                 <li><span>Total: </span> {cartTotal}</li>
                             </section>
                             <button className='btn btn-chkout' onClick={()=> dispatch(checkOut(items))}>Checkout</button> 
-                            </>}
+                        </>}
             </section>
         </div>
        
