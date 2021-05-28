@@ -1,3 +1,5 @@
+@import '../styles/mixins.scss';
+
 :root {
     --primaryColor: #f09d51;
     --mainWhite: #fff;
@@ -14,7 +16,6 @@ $colors:(
     SkeyeBlu: #B0C6D9,
     greyBlye: #7693A6
 );
-
 
 body, html{
     height: 100%;
@@ -34,13 +35,17 @@ body, html{
         background: rgba(255,255,255, 0.4);
         display: inline-block;
         padding: 3rem;
+
+        @include breakpoints(mobile-first){
+            padding: 1rem .5rem;
+        }
     }
 
     .banner-title{
         font-size: 3rem;
         text-transform: uppercase;
         letter-spacing: 1px;
-        margin-bottom: 3rem;
+        margin-bottom: 1.5rem;
         color: white;
     }
 
@@ -53,6 +58,7 @@ body, html{
         background-color: map-get($colors,liteBlu);
         transition: all 0.3s linear;
         cursor: pointer;
+        border: none;
     }
 
     .btn-banner:hover{
@@ -78,6 +84,7 @@ body, html{
         margin-right: auto;
         margin-left: auto;
     }
+    
     .featList{
         display: flex;
         flex-wrap: wrap;
@@ -89,7 +96,6 @@ body, html{
         flex-basis: 300px;
     }
 }
-
 
 .homeBg{
     width: 100%;

@@ -113,7 +113,6 @@ const products = [
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate eu scelerisque felis imperdiet proin fermentum.",
         "availableSizes": ["L", "XL"],
         "price": 75.00,
-        
         "isFreeShipping": true
       }
 ]

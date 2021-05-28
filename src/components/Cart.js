@@ -9,7 +9,6 @@ const Cart = () => {
         setIsClosed(!isClosed)
     }
     
-
     return (
         <div className='cart-overlay'>
             <div className='cart-slider'>

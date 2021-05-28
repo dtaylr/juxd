@@ -8,7 +8,7 @@ export const getCart = cartMem => dispatch=>{
 //     dispatch({type: types.OPEN_CART, payload: })
 // }
 
-export const add2Cart = (items, product) => dispatch =>{
+export const add2Cart = (items, product, count) => dispatch =>{
    const cartItems = items.slice();
 
     let prodInCart = false;
@@ -18,11 +18,15 @@ export const add2Cart = (items, product) => dispatch =>{
                 item.count++;
             }
         });
+
+        //if count > 1 then add the count selefcted otherwise add 0. 
         if(!prodInCart){
-            cartItems.push({...product, count: 1});
+            cartItems.push({...product, count});
         }
+
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
-        alert(`Added ${product.title} to cart!`)
+        alert(`Added ${count} ${product.title} to the cart!`)
+
         return dispatch({type: types.ADD_TO_CART, payload:{
             cartItems: cartItems
         }
@@ -31,12 +35,19 @@ export const add2Cart = (items, product) => dispatch =>{
 
 
 export const removeFromCart = (items, product) => dispatch =>{
-    const cartItems = items.filter(elm=> elm.id !== product.id)
+    const cartItems = items.filter(elm => elm.id !== product.id)
     localStorage.setItem('cartItems', JSON.stringify(cartItems))
-    alert(`Removed ${product.title} to cart!`)
+    alert(`Removed ${product.title} from cart!`)
     return dispatch({type: types.REMOVE_ITEM, payload:{
         cartItems
     }})
+}
+
+export const getTotalCost = cartMem => dispatch => {
+   const totalInCart = cartMem.reduce((acc,curVal) => {
+     return acc + (curVal.price * curVal.count); 
+    }, 0)
+    return dispatch({type: types.TOTAL_UP, payload: totalInCart})
 }
 
 export const addItem = (count, price) => dispatch =>{

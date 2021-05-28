@@ -58,7 +58,6 @@ $mdLrgScreen: 400px;
         width: 100%;
         height: 100%;
         box-shadow: 5px 10px 8px #888888;
-
     }
 
 
@@ -84,6 +83,12 @@ $mdLrgScreen: 400px;
 
         .detailPrice{
             margin-bottom: 1.5rem;
+        }
+
+        #sizeSelect{
+            padding: .3rem;
+            border-radius: 15px;
+            text-align: center;
         }
         
         .sizeSelector{

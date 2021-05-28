@@ -26,7 +26,12 @@ export default function (state = initialState, {type, payload}){
         case types.GET_CART:
             return{
                 ...state,
-                cartItems: payload
+                cartItems: payload,
+            }
+        case types.TOTAL_UP:
+            return{
+                ...state,
+                payload: payload
             }
             default:
                 return{

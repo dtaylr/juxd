@@ -1,45 +1,80 @@
-import React from 'react'
+import React, {useRef, useState} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import {add2Cart} from '../actions/cartActions'
-// import {hydratePage} from '../actions/pageActions';
-// import Counter from '../components/Counter';
+import Counter from '../components/Counter';
 
 const ProductDetail = () => {
 
     const dispatch = useDispatch()
 
+    const skuRef = useRef()
+
+    const [size, setSize] = useState()
+
+    const [count, setCount] = useState(1)
+
     const lastPage = useSelector(state => state.products.hydrate)
-    console.log(lastPage)
+
+    console.log(`This is the ${lastPage}`)
    
     const item = useSelector(state => state.products.prodId)
 
     const items = useSelector(state => state.cart.cartItems)
 
-    const {sku, title, foto, description, availableSizes, price, isFreeShipping} = lastPage 
+    const {sku, title, foto, description, availableSizes, price, id, isFreeShipping} = lastPage 
 
-    // useEffect(() => {
-    //     dispatch(hydratePage(item))
-    // }, [])
+    //Search if add is in cart 
+    const onChange = e => {
+        setSize(e.target.value)
+    }
+
+    const handleChange = e => {
+        setCount(parseInt(e.target.value))
+    }
 
     return (
         <div id='prodDetailContainer'>
             <h1>{title}</h1>
             <section className='detailImgContainer'>
-                <img className='detailFoto' src={foto} alt={title}/>
+                <img 
+                    className='detailFoto' 
+                    src={foto} 
+                    alt={title}
+                />
             </section>
             <section className='prodDetails'>
                 <h4>Product Details</h4>
                     <p className='description'>{description}</p>
                     <p className='detailPrice'>${price}</p>
                     <p className='detailShipping'>{isFreeShipping}</p>
+                <Counter 
+                    styles={{'padding': '20px'}}
+                    count={count} 
+                    id={id} 
+                    handleChange={handleChange}
+                />
                     <p className='detailSizeHeading'>Select Size</p>
-                    <article className='sizeSelector'>{availableSizes.map(size => (<li>{size}</li>))}
-                </article>
-               
-                <p className='detailSKU'>SKU: {sku}</p>
+                    <select 
+                        id='sizeSelect' 
+                        ref={skuRef} 
+                        onChange={onChange}
+                    >
+                        <option value=''>
+                            Size
+                        </option>
+                        {availableSizes.map((size) => (
+                            <option 
+                                key={id} 
+                                value={size}>
+                                    {size}
+                            </option>)
+                        )}
+                    </select>
             </section>
-             {/* <Counter count={count}/> */}
-             <button onClick={()=> dispatch(add2Cart(items, item))}className='btn btn-feat'>Add to Cart</button>
+             <button 
+                onClick={()=> dispatch(add2Cart(items, item, count))}
+                className='btn btn-feat'>Add to Cart
+            </button>
         </div>
     )
 }

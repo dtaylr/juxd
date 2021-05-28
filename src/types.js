@@ -11,5 +11,6 @@ export const DECREMENT = 'DECREMENT';
 export const ADD_ITEM = 'ADD_ITEM';
 export const REMOVE_ITEM = 'REMOVE_ITEM';
 export const CHECKOUT = 'CHECKOUT';
-export const REHYDRATE = 'REHYDRATE'
+export const REHYDRATE = 'REHYDRATE';
+export const TOTAL_UP = 'TOTAL_UP';
 
