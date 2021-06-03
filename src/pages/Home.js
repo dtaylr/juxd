@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import {getProds} from '../actions/productActions'
 import {Link} from 'react-router-dom';
 import {useDispatch,useSelector} from 'react-redux'
@@ -9,9 +9,12 @@ import Product from '../components/Product'
 
 const Home = () => {
 
+    //pass counter here
     const dispatch = useDispatch()
 
     const prods = useSelector(state => state.products.items)
+    const [count, setCount] = useState(1)
+
     // const items = useSelector(state => state.cart.cartItems)
 
     useEffect(()=>{
@@ -40,7 +43,7 @@ const Home = () => {
                         className='prod'
                     >
                         <div className='products'>
-                        <Product product={product}/>
+                        <Product count={count} product={product}/>
                         </div>
                         <div className='featBtn-container'>
                             <button 

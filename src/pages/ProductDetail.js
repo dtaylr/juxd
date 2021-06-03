@@ -14,14 +14,14 @@ const ProductDetail = () => {
     const [count, setCount] = useState(1)
 
     const lastPage = useSelector(state => state.products.hydrate)
-
-    console.log(`This is the ${lastPage}`)
    
     const item = useSelector(state => state.products.prodId)
 
     const items = useSelector(state => state.cart.cartItems)
 
-    const {sku, title, foto, description, availableSizes, price, id, isFreeShipping} = lastPage 
+    const {title, foto, description, availableSizes, price, id, isFreeShipping} = lastPage 
+
+    console.log(lastPage)
 
     //Search if add is in cart 
     const onChange = e => {
@@ -39,7 +39,7 @@ const ProductDetail = () => {
                 <img 
                     className='detailFoto' 
                     src={foto} 
-                    alt={title}
+                    alt={`${title} image`}
                 />
             </section>
             <section className='prodDetails'>

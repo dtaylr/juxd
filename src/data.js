@@ -1,12 +1,12 @@
 
 import blkjacket from '../src/media/blkjacketwall.jpeg';
 import colorBands from '../src/media/colorBands.jpeg';
-import device from '../src/media/device.jpeg';
+import bagHat from '../src/media/bag-hat.jpeg';
 import floralBag from '../src/media/floralBag.jpeg';
 import leatherBP from '../src/media/leatherBP.jpeg';
 import scarfnBlaze from '../src/media/scarfnBlaze.jpeg';
-import wallet from '../src/media/wallet.jpeg';
-import suits from '../src/media/suits.jpeg';
+import cream from '../src/media/white-shirt.jpeg';
+import groot from '../src/media/groot.jpeg';
 import womenWatch from '../src/media/women-watch.jpeg';
 
 
@@ -71,8 +71,8 @@ const products = [
       {
         "id": 6,
         "sku": 6090484789343891,
-        "title": "Refurbished Phone",
-        "foto": device,
+        "title": "Hat + bag deal",
+        "foto": bagHat,
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate eu scelerisque felis imperdiet proin fermentum.",
         "availableSizes": ["XL", "XXL"],
         "price": 300.00,
@@ -83,12 +83,12 @@ const products = [
       {
         "id": 7,
         "sku": 18532669286405342,
-        "title": " Plain Wallet",
-        "foto": wallet,
+        "title": "Cream Shirt",
+        "foto": cream,
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate eu scelerisque felis imperdiet proin fermentum.",
         "availableSizes": ["S"],
         "style": "Preto com listras brancas",
-        "price": 50.00,
+        "price": 75.00,
         
         "isFreeShipping": true
       },
@@ -96,8 +96,8 @@ const products = [
       {
         "id": 8,
         "sku": 5619496040738316,
-        "title": "Suits",
-        "foto": suits,
+        "title": "Collectable",
+        "foto": groot,
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate eu scelerisque felis imperdiet proin fermentum.",
         "availableSizes": ["XL"],
         "style": "Azul escuro",

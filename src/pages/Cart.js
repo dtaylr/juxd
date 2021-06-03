@@ -22,6 +22,7 @@ const Cart = () => {
     // }, [dispatch])
 
     let subTotal = cartMem.reduce((a,c)=> a + c.price * c.count, 0)
+    let cartCount = cartMem.reduce((a,c) => a += c.count, 0)
     
     let tax = subTotal * 0.08
 
@@ -34,8 +35,12 @@ const Cart = () => {
     return (
         <div id='wrapper'>
             <section className='cart'>
-                {!cartMem.length ? (<p className='empty-cart'>Cart is Empty</p>): 
-                (<p className='cartHeader'>You have <span className='cartCount'>{cartMem.length}</span> product(s) in your cart<hr/></p>)
+                {!cartMem.length ? 
+                    (<p className='empty-cart'>Cart is Empty</p>) : (<p className='cartHeader'>
+                        You have <span className='cartCount'>{cartCount}</span> 
+                            {cartCount > 1 ? ` items in your cart` :  ` item in your cart`}
+                        <hr/>
+                    </p>)
                     }
                     {cartMem.length && cartMem.map(item=> 
                         <div key={item.id} className='cartItems'>
@@ -44,10 +49,10 @@ const Cart = () => {
                     )}
                     {cartMem.length === 0 || null ? null : <>
                       <section className='totals'>
-                                <li><span>Sub Total:</span> {cartSubTotal}</li>
-                                <li><span>Tax: </span> {cartTaxTotal}</li>
-                                <li><span>Total: </span> {cartTotal}</li>
-                            </section>
+                            <li><span>Sub Total:</span> {cartSubTotal}</li>
+                            <li><span>Tax: </span> {cartTaxTotal}</li>
+                            <li><span>Total: </span> {cartTotal}</li>
+                        </section>
                             <button className='btn btn-chkout' onClick={()=> dispatch(checkOut(items))}>Checkout</button> 
                         </>}
             </section>
