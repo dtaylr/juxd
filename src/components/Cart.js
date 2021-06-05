@@ -31,7 +31,9 @@ const Cart = () => {
                     </div>
                 </div>
                 <div className='cart-footer'>
-                <h3>Your Total:$ <span className='cart-total'>0</span></h3>     
+                <h3>Your Total:$ <span className='cart-total'>
+                    0</span>
+                </h3>     
                 <button className='clear-cart btn-banner'>Clear Cart</button>
             </div>
             </div>
